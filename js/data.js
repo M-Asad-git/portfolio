@@ -77,51 +77,36 @@ const PORTFOLIO_DATA = {
 
   experience: [
     {
-      id: "tritechteal-dev",
-      role: "Part-time Web Developer",
-      company: "TriTechTeal",
-      companyUrl: "https://tritechteal.com/",
-      period: "2024 — Present",
-      type: "Part-time Role",
-      badge: "Current Role",
-      description: "Promoted from Web Development Intern to Part-time Web Developer. Responsible for developing and deploying production-ready client websites, responsive platforms, and web portals across healthcare, real estate, interior design, and international commerce.",
-      highlights: [
-        "Architected and deployed responsive client platforms including Global eTelerad, Teleradiology Partner, A-One Real Estate & Builder, A One Source Interior, and Brightexx.",
-        "Optimized frontend loading speeds, structured SEO metadata, and cross-browser responsiveness.",
-        "Collaborated closely with client stakeholders to translate design concepts into fast, modern web interfaces."
-      ],
-      technologies: ["Next.js", "React", "JavaScript (ES6+)", "HTML5 / CSS3", "SEO & Core Web Vitals", "Git / GitHub"]
-    },
-    {
-      id: "tritechteal-intern",
-      role: "Web Development Intern",
-      company: "TriTechTeal",
-      companyUrl: "https://tritechteal.com/",
-      period: "2023 — 2024",
-      type: "Internship",
-      badge: "Completed",
-      description: "Gained hands-on software agency experience building accessible UI components, client landing pages, and responsive layout systems.",
-      highlights: [
-        "Mastered frontend fundamentals, semantic markup, modern CSS layouts, and version control workflows.",
-        "Assisted senior engineers with refactoring and deploying client website enhancements."
-      ],
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Git"]
-    },
-    {
       id: "az25lab-ai",
       role: "AI & Software Developer",
-      company: "AZ25 Lab Organization",
+      company: "AZ25 Lab",
       companyUrl: "https://az25lab.com/",
       period: "2024 — Present",
-      type: "Core Member",
+      type: "Current Organization",
       badge: "Current Role",
-      description: "Researching, engineering, and launching autonomous AI agents, web scrapers, intelligent assistants, and productivity tools aimed at making people's daily work easier.",
+      description: "Researching, engineering, and launching autonomous AI agents, web scrapers, intelligent assistants, and productivity tools aimed at making daily workflows seamless.",
       highlights: [
         "Engineered the autonomous Remote Job Agent scraping ATS platforms and LinkedIn with custom skill filtering, Slack bot alerts, and daily email summaries.",
         "Developing conversational AI assistants and LLM-powered productivity workflows.",
         "Built responsive productivity web applications including the AZ25 Lab Todo Suite."
       ],
       technologies: ["Python", "AI Agents", "LLM APIs", "Web Scraping", "Slack API", "SMTP Automation"]
+    },
+    {
+      id: "tritechteal-dev",
+      role: "Web Developer (Former Intern)",
+      company: "TriTechTeal",
+      companyUrl: "https://tritechteal.com/",
+      period: "2024",
+      type: "Development Role",
+      badge: "Client Web",
+      description: "Developed and deployed production-ready client websites, responsive platforms, and web portals across healthcare, real estate, interior design, and international commerce.",
+      highlights: [
+        "Architected and deployed responsive client platforms including Global eTelerad, Teleradiology Partner, A-One Real Estate & Builder, A One Source Interior, and Brightexx.",
+        "Optimized frontend loading speeds, structured SEO metadata, and cross-browser responsiveness.",
+        "Configured custom domain DNS records (A/CNAME/MX), SSL certificates, and hosting on Verpex and cPanel."
+      ],
+      technologies: ["JavaScript (ES6+)", "HTML5 / CSS3", "Verpex / cPanel", "DNS Setup", "SEO & Speed", "Git"]
     },
     {
       id: "emerson-degree",
