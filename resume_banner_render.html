@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume OG Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #070b14;
+      font-family: 'Inter', sans-serif;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .glow-cyan {
+      position: absolute;
+      top: -100px;
+      left: 100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.28) 0%, rgba(6, 182, 212, 0) 70%);
+      filter: blur(50px);
+    }
+    .glow-emerald {
+      position: absolute;
+      bottom: -100px;
+      right: 100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(60px);
+    }
+
+    .banner-container {
+      position: relative;
+      z-index: 10;
+      width: 1140px;
+      height: 570px;
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 24px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(6, 182, 212, 0.12);
+      backdrop-filter: blur(20px);
+      display: grid;
+      grid-template-columns: 460px 1fr;
+      padding: 35px 40px;
+      gap: 35px;
+      align-items: center;
+    }
+
+    /* Left: Realistic White ATS Resume Sheet */
+    .resume-sheet-preview {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 12px;
+      padding: 24px 28px;
+      height: 500px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(6, 182, 212, 0.25);
+      border: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      font-size: 11px;
+      line-height: 1.45;
+    }
+    .cv-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 2px;
+      letter-spacing: -0.3px;
+    }
+    .cv-tagline {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 6px;
+    }
+    .cv-contacts {
+      font-size: 9.5px;
+      color: #64748b;
+      font-family: 'JetBrains Mono', monospace;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid #e2e8f0;
+      margin-bottom: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .cv-section-title {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0284c7;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin: 8px 0 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .cv-entry-row {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 11px;
+    }
+    .cv-entry-sub {
+      font-size: 10px;
+      color: #475569;
+      margin-bottom: 3px;
+    }
+    .cv-bullets {
+      list-style: none;
+      margin-bottom: 6px;
+    }
+    .cv-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 9.8px;
+      color: #334155;
+      margin-bottom: 2px;
+    }
+    .cv-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #0284c7;
+      font-weight: bold;
+    }
+
+    /* Right: Information and Highlights */
+    .details-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 20px;
+      color: #34d399;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+    .right-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .right-subtitle {
+      font-size: 18px;
+      color: #38bdf8;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    /* Highlight Feature List */
+    .highlights-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .feature-item {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13.5px;
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+    .feature-item strong {
+      color: #38bdf8;
+    }
+    .feature-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+    }
+    .url-text {
+      color: #38bdf8;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-cyan"></div>
+  <div class="glow-emerald"></div>
+
+  <div class="banner-container">
+    <!-- Left ATS Resume Preview -->
+    <div class="resume-sheet-preview">
+      <h1 class="cv-name">MUHAMMAD ASAD</h1>
+      <div class="cv-tagline">AI &amp; Full-Stack Web Developer</div>
+      <div class="cv-contacts">
+        <span>📍 Multan, PK</span>
+        <span>•</span>
+        <span>📞 +92 346 7042119</span>
+        <span>•</span>
+        <span>✉️ asadpgc125@gmail.com</span>
+      </div>
+
+      <div class="cv-section-title">Education</div>
+      <div class="cv-entry-row">
+        <span>Emerson University Multan</span>
+        <span>2025 — 2029</span>
+      </div>
+      <div class="cv-entry-sub">BS in Artificial Intelligence (3rd Semester)</div>
+
+      <div class="cv-section-title">Work Experience</div>
+      <div class="cv-entry-row">
+        <span>AZ25 Lab (az25lab.com)</span>
+        <span style="color: #10b981;">March 2025 — Present</span>
+      </div>
+      <div class="cv-entry-sub">AI &amp; Software Developer • Current Organization</div>
+      <ul class="cv-bullets">
+        <li>Built Remote Job Agent scraping ATS &amp; LinkedIn with Slack alerts.</li>
+        <li>Automated daily email digests &amp; productivity workflows.</li>
+      </ul>
+
+      <div class="cv-entry-row" style="margin-top: 4px;">
+        <span>TriTechTeal (tritechteal.com)</span>
+        <span>2024 — Jan 2025</span>
+      </div>
+      <div class="cv-entry-sub">Web Developer • Former Workplace</div>
+      <ul class="cv-bullets">
+        <li>Architected &amp; deployed 5+ live client web platforms.</li>
+        <li>Managed DNS records, SSL &amp; Verpex/cPanel cloud hosting.</li>
+      </ul>
+
+      <div class="cv-section-title">Live Client Portals</div>
+      <ul class="cv-bullets">
+        <li><strong>globaletelerad.com</strong> (Diagnostic Telemedicine)</li>
+        <li><strong>brightexx.com</strong> (International Trade Commerce)</li>
+      </ul>
+    </div>
+
+    <!-- Right Side Content -->
+    <div class="details-column">
+      <div class="eyebrow-pill">
+        <span>📄</span>
+        <span>OFFICIAL CURRICULUM VITAE</span>
+      </div>
+
+      <h1 class="right-title">Printable Resume / CV</h1>
+      <div class="right-subtitle">ATS-Optimized 1-Page Silicon Valley Standard</div>
+
+      <div class="highlights-list">
+        <div class="feature-item" style="border-left: 3px solid #10b981;">
+          <span class="feature-icon">🤖</span>
+          <span><strong>AZ25 Lab (March 2025 — Present):</strong> AI &amp; Scraper Bots</span>
+        </div>
+
+        <div class="feature-item" style="border-left: 3px solid #06b6d4;">
+          <span class="feature-icon">🏢</span>
+          <span><strong>TriTechTeal (2024 — Jan 2025):</strong> 5+ Live Client Portals</span>
+        </div>
+
+        <div class="feature-item" style="border-left: 3px solid #8b5cf6;">
+          <span class="feature-icon">🎓</span>
+          <span><strong>Emerson University:</strong> BS in Artificial Intelligence</span>
+        </div>
+
+        <div class="feature-item" style="border-left: 3px solid #f59e0b;">
+          <span class="feature-icon">⚡</span>
+          <span><strong>1-Click PDF Export:</strong> Formatted for A4 &amp; US Letter</span>
+        </div>
+      </div>
+
+      <div class="footer-bar">
+        <div class="url-text">🌐 m-asad-git.github.io/portfolio/resume.html</div>
+        <div style="color: #64748b;">Direct Printable CV</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
