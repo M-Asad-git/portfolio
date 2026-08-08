@@ -19,7 +19,7 @@ const PORTFOLIO_DATA = {
     whatsapp: "https://wa.me/923467042119",
     github: "https://github.com/M-Asad-git",
     az25Github: "https://github.com/az25lab",
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/muhammad-asad-280450387",
     status: "Available for Project-Based Contracts & Part-time Roles",
     bio: "Passionate software engineer and 3rd-semester Artificial Intelligence undergraduate at Emerson University Multan. Building client web systems at TriTechTeal, designing custom brand logos, and creating AI automation bots at AZ25 Lab. Open to project-based client work, freelance web & logo design, custom automation tools, and part-time engineering roles.",
     metrics: [
