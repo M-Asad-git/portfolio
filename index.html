@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Asad — AI Engineer & Full-Stack Web Developer Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Personal portfolio of Muhammad Asad, BS Artificial Intelligence student at Emerson University Multan, Developer at TriTechTeal, and AI builder at AZ25 Lab. Explore AI bots, full-stack web platforms, and mobile apps." />
+  <meta name="keywords" content="Muhammad Asad, AI Engineer, Full-Stack Developer, TriTechTeal, AZ25 Lab, Remote Job Agent, Emerson University Multan, Python AI, Web Development, Next.js, Healthcare Portals" />
+  <meta name="author" content="Muhammad Asad" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Muhammad Asad — AI & Full-Stack Developer" />
+  <meta property="og:description" content="Portfolio showcasing AI automation agents, enterprise client web platforms, and mobile applications." />
+  <meta property="og:image" content="assets/images/avatar.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <div class="brand-icon">MA</div>
+        <span>Muhammad Asad</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="resume.html" target="_blank" class="nav-link" style="color: var(--cyan); font-weight: 600;">Resume ↗</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle Theme Mode" title="Toggle Light/Dark Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>
+        </button>
+        
+        <a href="resume.html" target="_blank" class="btn btn-secondary btn-sm" title="View Printable Resume">
+          <span>Resume 📄</span>
+        </a>
+
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Let's Talk</span>
+        </a>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content-col">
+          <div class="hero-intro">
+            <span class="status-badge">
+              <span class="status-dot"></span>
+              Available for Project-Based Work &amp; Part-Time Roles
+            </span>
+            <span class="hero-greeting">// Hello World, I am</span>
+          </div>
+
+          <h1 class="hero-title">
+            Muhammad <span class="gradient-text">Asad</span>
+          </h1>
+
+          <div class="hero-typewriter-wrap">
+            <span>&gt; </span>
+            <span id="typewriter-text"></span>
+            <span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-desc">
+            BS AI undergraduate at <strong>Emerson University Multan</strong>, developer at <strong>TriTechTeal</strong>, and automation builder at <strong>AZ25 Lab</strong>. Open for <strong>project-based client contracts, freelance website development, and part-time remote engineering roles</strong>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Featured Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <button onclick="openResumeModal()" class="btn btn-secondary" title="View Printable Resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <span>Preview Resume</span>
+            </button>
+            <button onclick="copyEmailToClipboard()" class="btn btn-secondary" title="Copy Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span>Copy Email</span>
+            </button>
+            <a href="https://wa.me/923467042119" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Chat on WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"></path></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics" id="hero-metrics-container">
+            <!-- Dynamic Metrics -->
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="glass-card hero-visual-card">
+            <div class="hero-avatar-wrap">
+              <img src="assets/images/avatar.jpg" alt="Muhammad Asad Developer Photo" class="hero-avatar-img" />
+              <div class="floating-chip chip-1">
+                <span style="color: var(--cyan); font-weight: bold;">⚡</span>
+                <span>AI Agents &amp; Scraping</span>
+              </div>
+              <div class="floating-chip chip-2">
+                <span style="color: var(--emerald); font-weight: bold;">🚀</span>
+                <span>Full-Stack &amp; Client Web</span>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.25rem;">Muhammad Asad</h3>
+            <p style="font-size: 0.85rem; color: var(--cyan); font-family: var(--font-mono); margin-bottom: 1rem;">@M-Asad-git • AZ25 Lab • TriTechTeal</p>
+            
+            <div style="padding: 0.75rem; background: var(--bg-tertiary); border-radius: var(--radius-md); font-size: 0.8rem; color: var(--text-secondary); text-align: left;">
+              <code style="color: var(--purple); font-family: var(--font-mono);">$ status --verbose</code><br />
+              <span style="color: var(--emerald);">✓</span> BS AI (3rd Sem) @ Emerson Multan<br />
+              <span style="color: var(--emerald);">✓</span> Part-time Dev @ TriTechTeal<br />
+              <span style="color: var(--emerald);">✓</span> AI Builder @ AZ25 Lab
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workplace References & Affiliations Banner -->
+    <section class="affiliations-section">
+      <div class="container">
+        <div class="affiliations-header">
+          <span class="affiliations-title">// Current Professional Roles &amp; Company Affiliations</span>
+        </div>
+        <div class="affiliations-grid">
+          <a href="https://tritechteal.com/" target="_blank" rel="noopener noreferrer" class="glass-card affiliation-card">
+            <div class="affiliation-icon">TT</div>
+            <div class="affiliation-info">
+              <span class="affiliation-badge">Active Workplace • Part-time Developer</span>
+              <h3 class="affiliation-name">TriTechTeal <span>↗</span></h3>
+              <p class="affiliation-desc">Software development agency where I build client web platforms, high-performance portals &amp; digital solutions.</p>
+            </div>
+          </a>
+
+          <a href="https://az25lab.com/" target="_blank" rel="noopener noreferrer" class="glass-card affiliation-card">
+            <div class="affiliation-icon">AZ</div>
+            <div class="affiliation-info">
+              <span class="affiliation-badge">Active Organization • AI Developer</span>
+              <h3 class="affiliation-name">AZ25 Lab <span>↗</span></h3>
+              <p class="affiliation-desc">AI research &amp; engineering organization where I build autonomous agents, scraping bots &amp; intelligent tools.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Projects Showcase Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Engineering Portfolio</span>
+          <h2 class="section-title">Featured Works &amp; Real-World Systems</h2>
+          <p class="section-subtitle">A curated selection of live client web platforms, autonomous AI bots, and native applications built and deployed by Muhammad Asad.</p>
+        </div>
+
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; Automation Agents</button>
+          <button class="filter-btn" data-filter="web">Enterprise &amp; Client Web</button>
+          <button class="filter-btn" data-filter="apps">Mobile &amp; Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Dynamic Project Cards Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Experience & Career Timeline Section -->
+    <section id="experience" class="section" style="background: var(--bg-glass);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Career &amp; Education</span>
+          <h2 class="section-title">Experience &amp; Academic Journey</h2>
+          <p class="section-subtitle">From internships to part-time development roles at TriTechTeal, AI engineering at AZ25 Lab, and artificial intelligence degree studies.</p>
+        </div>
+
+        <div class="timeline-container" id="timeline-container">
+          <!-- Dynamic Timeline Items Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Skills & Tech Stack Matrix -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Capabilities &amp; Workflow</span>
+          <h2 class="section-title">Engineering Capabilities &amp; Tech Stack</h2>
+          <p class="section-subtitle">Real-world full-lifecycle website delivery, DNS &amp; Verpex hosting management, AI-assisted rapid prototyping, and software engineering tools.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container">
+          <!-- Dynamic Skills Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. What I Can Deliver For You (Client Solutions) -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Client Solutions &amp; Scope</span>
+          <h2 class="section-title">What I Can Deliver For You</h2>
+          <p class="section-subtitle">Available for project-based sprints and part-time remote roles to ship high-performance websites, custom DNS hosting, and intelligent automation bots.</p>
+        </div>
+
+        <div class="services-grid" id="services-container">
+          <!-- Dynamic Services Rendered via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. About Me Section -->
+    <section id="about" class="section" style="background: var(--bg-glass);">
+      <div class="container">
+        <div class="about-grid">
+          <div class="glass-card about-card">
+            <span class="section-tag">// Behind the Code</span>
+            <h2 style="font-size: 2rem; font-weight: 800; margin: 0.5rem 0 1.25rem; color: var(--text-primary);">
+              Building Practical AI &amp; <br /><span class="gradient-text">Human-Centered Web Solutions</span>
+            </h2>
+            <p class="about-text">
+              I am <strong>Muhammad Asad</strong>, currently pursuing my <strong>BS in Artificial Intelligence (3rd Semester)</strong> at Emerson University Multan. My journey began with a curiosity for how algorithms can automate mundane tasks and solve real-world problems.
+            </p>
+            <p class="about-text">
+              At <strong>TriTechTeal</strong>, I transitioned from an intern to a part-time developer, contributing to high-availability client platforms in diagnostic teleradiology, international commerce, real estate, and interior architecture. At <strong>AZ25 Lab</strong>, I specialize in building autonomous AI agents, web scrapers, and conversational assistants designed to make daily workflows seamless.
+            </p>
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-title">🌐 Web &amp; DNS Hosting</div>
+                <div class="pillar-desc">Full websites, custom DNS &amp; Verpex/cPanel live deployment.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">🎨 Logo &amp; Brand Design</div>
+                <div class="pillar-desc">Custom company logos, vector brand marks &amp; UI color systems.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">🤖 AI Bots &amp; Vibe Coding</div>
+                <div class="pillar-desc">Rapid AI-assisted scraper bots, Slack webhooks &amp; digests.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">🎓 BS Artificial Intelligence</div>
+                <div class="pillar-desc">3rd semester undergraduate studies at Emerson University.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card about-card" style="display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
+            <h3 style="font-size: 1.35rem; font-weight: 700; color: var(--cyan);">Core Principles &amp; Work Ethics</h3>
+            
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--gradient-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</div>
+              <div>
+                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Impact-Driven Development</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Technology should save time and reduce friction. Whether it's a remote job agent or a hospital radiology portal, user value comes first.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--gradient-emerald); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</div>
+              <div>
+                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Clean Architecture &amp; Reliability</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Writing maintainable, modular, and well-structured code that can scale gracefully across evolving project requirements.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--gradient-purple); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</div>
+              <div>
+                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.2rem;">Humility &amp; Constant Learning</strong>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">Constantly exploring emerging AI frameworks, LLM integrations, and modern frontend paradigms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">// Get in Touch</span>
+          <h2 class="section-title">Let's Collaborate on Your Next Project</h2>
+          <p class="section-subtitle">Looking for an independent developer to build a fast client website, configure domain/DNS hosting, or automate workflows with custom AI bots? I am open for project-based contracts &amp; part-time roles.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="glass-card contact-info-card">
+            <div>
+              <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-primary);">Contact Channels</h3>
+              <p style="color: var(--text-secondary); font-size: 0.92rem;">Feel free to drop an email, chat on WhatsApp, or connect on GitHub.</p>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Direct Email</span>
+                <span class="channel-value">asadpgc125@gmail.com</span>
+                <button onclick="copyEmailToClipboard()" style="color: var(--cyan); font-size: 0.8rem; font-weight: 600; text-align: left; margin-top: 0.25rem;">[Click to Copy]</button>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.787"></path></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">Instant WhatsApp / Phone</span>
+                <span class="channel-value">+92 346 7042119</span>
+                <a href="https://wa.me/923467042119" target="_blank" rel="noopener noreferrer" style="color: var(--emerald); font-size: 0.8rem; font-weight: 600; margin-top: 0.25rem;">[Open WhatsApp Chat ↗]</a>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div class="channel-details">
+                <span class="channel-label">GitHub Profile</span>
+                <span class="channel-value"><a href="https://github.com/M-Asad-git" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">github.com/M-Asad-git ↗</a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card contact-form-card">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Send a Direct Message</h3>
+            
+            <form id="portfolio-contact-form">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Name</label>
+                <input class="form-control" type="text" id="contact-name" placeholder="John Doe" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Your Email Address</label>
+                <input class="form-control" type="email" id="contact-email" placeholder="john@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-msg">Project Details / Message</label>
+                <textarea class="form-control" id="contact-msg" rows="4" placeholder="Tell me about your project, idea, or role..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div id="modal-body-content">
+        <!-- Content Injected Dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Toast Notification -->
+  <div class="toast-notification" id="toast-notification">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    <span id="toast-text">Action completed successfully!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 0.75rem;">
+            <div class="brand-icon">MA</div>
+            <span>Muhammad Asad</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 320px; line-height: 1.6;">
+            BS AI student, developer at TriTechTeal, and builder at AZ25 Lab. Dedicated to crafting reliable, intelligent, and user-centric software.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 1rem;">Quick Navigation</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.88rem; color: var(--text-secondary);">
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Featured Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience &amp; Timeline</a></li>
+            <li><a href="#skills" class="nav-link">Skills Matrix</a></li>
+            <li><a href="resume.html" target="_blank" style="color: var(--cyan); font-weight: 600;">Printable Resume / CV ↗</a></li>
+            <li><a href="#about" class="nav-link">About &amp; Philosophy</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 1rem;">Current Workplaces</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.88rem; color: var(--text-secondary);">
+            <li>
+              <a href="https://tritechteal.com/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan); font-weight: 700; font-size: 0.92rem;">TriTechTeal ↗</a>
+              <span style="display: block; font-size: 0.76rem; color: var(--text-muted); margin-top: 0.15rem;">Part-time Web Developer (Former Intern)</span>
+            </li>
+            <li>
+              <a href="https://az25lab.com/" target="_blank" rel="noopener noreferrer" style="color: var(--purple); font-weight: 700; font-size: 0.92rem;">AZ25 Lab ↗</a>
+              <span style="display: block; font-size: 0.76rem; color: var(--text-muted); margin-top: 0.15rem;">AI &amp; Software Developer (Bots &amp; Agents)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--text-primary); text-transform: uppercase; font-family: var(--font-mono); margin-bottom: 1rem;">Live Client Websites &amp; Work</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem; font-size: 0.85rem; color: var(--text-secondary);">
+            <li><a href="https://globaletelerad.com/" target="_blank" rel="noopener noreferrer" style="color: var(--emerald);">globaletelerad.com ↗</a> <span style="font-size: 0.75rem; color: var(--text-muted);">(Telemedicine)</span></li>
+            <li><a href="https://www.teleradpartner.com/" target="_blank" rel="noopener noreferrer" style="color: var(--emerald);">teleradpartner.com ↗</a> <span style="font-size: 0.75rem; color: var(--text-muted);">(Radiology)</span></li>
+            <li><a href="https://aonesourceinterior.com/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">aonesourceinterior.com ↗</a> <span style="font-size: 0.75rem; color: var(--text-muted);">(Interior)</span></li>
+            <li><a href="https://aonerealestatebuilder.com/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">aonerealestatebuilder.com ↗</a> <span style="font-size: 0.75rem; color: var(--text-muted);">(Real Estate)</span></li>
+            <li><a href="https://brightexx.com/" target="_blank" rel="noopener noreferrer" style="color: var(--cyan);">brightexx.com ↗</a> <span style="font-size: 0.75rem; color: var(--text-muted);">(Commerce)</span></li>
+            <li><span style="color: var(--purple); font-weight: 600;">Remote Job Agent</span> <span style="font-size: 0.75rem; color: var(--text-muted);">(Private AI Bot)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Muhammad Asad. Built with Vanilla Web Standards &amp; Hosted on GitHub Pages.</span>
+        <span>Developer at TriTechTeal • AI Engineer at AZ25 Lab • BS AI Emerson University.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

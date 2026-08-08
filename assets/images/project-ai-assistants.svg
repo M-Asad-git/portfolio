@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="purpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#aiBg)"/>
+  
+  <rect x="35" y="30" width="530" height="300" rx="10" fill="#0f172a" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="35" y="30" width="530" height="36" rx="10" fill="#1e1b4b"/>
+  <circle cx="55" cy="48" r="4.5" fill="#ef4444"/>
+  <circle cx="70" cy="48" r="4.5" fill="#f59e0b"/>
+  <circle cx="85" cy="48" r="4.5" fill="#10b981"/>
+  <text x="110" y="52" fill="#c4b5fd" font-family="monospace" font-size="11">az25lab.com — AI Assistants &amp; Intelligent Tools</text>
+
+  <!-- Chat UI -->
+  <g transform="translate(65, 85)">
+    <!-- User Bubble -->
+    <rect x="180" y="10" width="290" height="40" rx="12" fill="#4338ca"/>
+    <text x="195" y="34" fill="#ffffff" font-family="sans-serif" font-size="11">Summarize daily tasks &amp; find tech leads...</text>
+
+    <!-- AI Bot Bubble -->
+    <rect x="10" y="65" width="460" height="85" rx="12" fill="#1e293b" stroke="#8b5cf6" stroke-width="1"/>
+    <circle cx="32" cy="85" r="12" fill="url(#purpGrad)"/>
+    <text x="32" y="90" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">AI</text>
+    <text x="55" y="90" fill="#a78bfa" font-family="sans-serif" font-weight="bold" font-size="12">AZ25 Intelligent Assistant</text>
+    <text x="55" y="110" fill="#cbd5e1" font-family="sans-serif" font-size="11">✓ Parsed 18 actionable tasks from your queue.</text>
+    <text x="55" y="130" fill="#cbd5e1" font-family="sans-serif" font-size="11">✓ Matched 4 relevant remote opportunities ready to review.</text>
+
+    <!-- Input bar -->
+    <rect x="10" y="170" width="460" height="42" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="25" y="196" fill="#64748b" font-family="sans-serif" font-size="12">Ask AI assistant anything or run workflow command...</text>
+    <rect x="410" y="176" width="50" height="30" rx="6" fill="#8b5cf6"/>
+    <text x="435" y="196" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="11" text-anchor="middle">RUN</text>
+  </g>
+</svg>

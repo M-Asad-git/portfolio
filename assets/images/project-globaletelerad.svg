@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="teleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#041f2e" />
+      <stop offset="100%" stop-color="#0b172a" />
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2dd4bf" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#teleBg)"/>
+  
+  <!-- UI Browser Mockup Window -->
+  <rect x="35" y="30" width="530" height="300" rx="10" fill="#0f172a" stroke="#0ea5e9" stroke-opacity="0.4" stroke-width="1.5"/>
+  <rect x="35" y="30" width="530" height="36" rx="10" fill="#1e293b"/>
+  <circle cx="55" cy="48" r="4.5" fill="#ef4444"/>
+  <circle cx="70" cy="48" r="4.5" fill="#f59e0b"/>
+  <circle cx="85" cy="48" r="4.5" fill="#10b981"/>
+  <rect x="110" y="40" width="280" height="16" rx="8" fill="#0f172a"/>
+  <text x="125" y="52" fill="#94a3b8" font-family="sans-serif" font-size="10">https://globaletelerad.com/</text>
+
+  <!-- Medical Cross / Pulse Icon -->
+  <g transform="translate(480, 75)">
+    <circle cx="20" cy="20" r="18" fill="#0ea5e9" fill-opacity="0.15" stroke="#0ea5e9" stroke-width="1.5"/>
+    <path d="M14 20 H26 M20 14 V26" stroke="#2dd4bf" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Header Content -->
+  <text x="65" y="100" fill="#f8fafc" font-family="sans-serif" font-weight="bold" font-size="20">Global eTeleradiology</text>
+  <text x="65" y="122" fill="#38bdf8" font-family="sans-serif" font-size="12">Diagnostic Teleradiology &amp; Remote PACS Solutions</text>
+
+  <!-- Feature Grid in Portal -->
+  <rect x="65" y="145" width="215" height="155" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="80" y="172" fill="#2dd4bf" font-family="sans-serif" font-weight="bold" font-size="13">Emergency Teleradiology</text>
+  <text x="80" y="195" fill="#94a3b8" font-family="sans-serif" font-size="10">• 24/7/365 On-Call Coverage</text>
+  <text x="80" y="215" fill="#94a3b8" font-family="sans-serif" font-size="10">• STAT Reads in &lt; 30 Minutes</text>
+  <text x="80" y="235" fill="#94a3b8" font-family="sans-serif" font-size="10">• Board Certified Radiologists</text>
+  <text x="80" y="270" fill="#0ea5e9" font-family="sans-serif" font-weight="bold" font-size="11">Live Clinical Network &gt;</text>
+
+  <rect x="300" y="145" width="235" height="155" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="315" y="172" fill="#60a5fa" font-family="sans-serif" font-weight="bold" font-size="13">Subspecialty Reporting</text>
+  <text x="315" y="195" fill="#94a3b8" font-family="sans-serif" font-size="10">• Neuro, Musculoskeletal &amp; MRI</text>
+  <text x="315" y="215" fill="#94a3b8" font-family="sans-serif" font-size="10">• Secure Cloud PACS Infrastructure</text>
+  <text x="315" y="235" fill="#94a3b8" font-family="sans-serif" font-size="10">• HIPAA Compliant Gateway</text>
+  <!-- ECG Line -->
+  <path d="M315 270 L345 270 L355 255 L365 285 L375 260 L385 275 L490 270" fill="none" stroke="#2dd4bf" stroke-width="2"/>
+</svg>
