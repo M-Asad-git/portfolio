@@ -1688,19 +1688,237 @@ textarea.form-control {
   line-height: 1.55;
 }
 
-@media print {
-  body * {
-    visibility: hidden;
+/* =========================================================================
+   COMPREHENSIVE MOBILE RESPONSIVENESS & TOUCH OPTIMIZATIONS
+   ========================================================================= */
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
   }
-  #resume-modal, #resume-modal * {
-    visibility: visible;
+
+  .hero-intro {
+    justify-content: center;
   }
-  #resume-modal {
-    position: absolute;
-    left: 0;
-    top: 0;
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-typewriter-wrap {
+    font-size: 1.05rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
     width: 100%;
-    background: #fff !important;
-    color: #000 !important;
+    gap: 0.65rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+
+  .metric-card {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .metric-val {
+    font-size: 1.2rem;
+  }
+
+  /* Avatar & floating badges */
+  .hero-avatar-wrap {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1.25rem;
+  }
+
+  .floating-chip {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem;
+  }
+
+  .floating-chip.chip-1 {
+    top: -5px;
+    right: -8px;
+  }
+
+  .floating-chip.chip-2 {
+    bottom: -5px;
+    left: -8px;
+  }
+
+  /* Projects Filter Bar Touch Carousel */
+  .projects-filter-bar {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    padding-bottom: 0.65rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .projects-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Projects Grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-thumb {
+    height: 195px;
+  }
+
+  /* Affiliations */
+  .affiliations-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .affiliation-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .affiliation-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  /* Skills & Services */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  /* Timeline */
+  .timeline-container::before {
+    left: 12px;
+  }
+
+  .timeline-dot {
+    left: 5px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-item {
+    padding-left: 32px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-card {
+    padding: 1.25rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  /* About & Pillars */
+  .about-card {
+    padding: 1.5rem;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Contact & Form */
+  .contact-info-card, .contact-form-card {
+    padding: 1.5rem;
+  }
+
+  /* Modals */
+  .modal-content {
+    width: 94vw;
+    max-height: 90vh;
+    padding: 1.25rem;
+  }
+
+  .modal-header h2 {
+    font-size: 1.35rem;
+  }
+
+  .modal-stat-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+
+  .resume-contact-bar {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .footer {
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
   }
 }
