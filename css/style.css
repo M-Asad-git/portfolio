@@ -379,6 +379,18 @@ img, svg {
   background: var(--bg-tertiary);
 }
 
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .mobile-menu-btn {
   display: none;
   width: 40px;
@@ -389,9 +401,20 @@ img, svg {
   align-items: center;
   justify-content: center;
   color: var(--text-primary);
+  cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
+  .nav-desktop-btn {
+    display: none !important;
+  }
+  .brand-logo span {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+  .nav-actions {
+    gap: 0.5rem;
+  }
   .nav-links {
     position: fixed;
     top: var(--nav-height);
@@ -408,6 +431,7 @@ img, svg {
     transition: transform var(--transition-normal);
     opacity: 0;
     pointer-events: none;
+    z-index: 1000;
   }
   .nav-links.open {
     transform: translateY(0);
