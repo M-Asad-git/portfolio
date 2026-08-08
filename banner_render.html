@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio OG Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #070b14;
+      font-family: 'Inter', sans-serif;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    /* Subtle background tech grid & ambient glow orbs */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .glow-cyan {
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.28) 0%, rgba(6, 182, 212, 0) 70%);
+      filter: blur(40px);
+    }
+    .glow-purple {
+      position: absolute;
+      bottom: -150px;
+      left: -100px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, rgba(139, 92, 246, 0) 70%);
+      filter: blur(50px);
+    }
+    .glow-emerald {
+      position: absolute;
+      top: 40%;
+      left: 35%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0) 70%);
+      filter: blur(50px);
+    }
+
+    /* Main Container Card */
+    .banner-card {
+      position: relative;
+      z-index: 10;
+      width: 1140px;
+      height: 570px;
+      background: rgba(13, 20, 36, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 28px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(6, 182, 212, 0.15);
+      backdrop-filter: blur(20px);
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      padding: 40px;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* Left Side: Avatar & Cyber Ring */
+    .avatar-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .avatar-wrapper {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #06b6d4, #8b5cf6, #10b981);
+      box-shadow: 0 0 35px rgba(6, 182, 212, 0.4), 0 0 15px rgba(139, 92, 246, 0.3);
+      margin-bottom: 20px;
+    }
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 50%;
+      border: 4px solid #070b14;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #34d399;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    /* Right Side: Typography & Roles */
+    .info-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .name-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 52px;
+      font-weight: 900;
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+    .headline {
+      font-size: 20px;
+      font-weight: 600;
+      color: #94a3b8;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .headline span.highlight {
+      color: #38bdf8;
+    }
+
+    /* High-Impact Capability Cards */
+    .badges-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .badge-card {
+      background: rgba(30, 41, 59, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .badge-icon {
+      font-size: 22px;
+    }
+    .badge-text-top {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f8fafc;
+      font-family: 'Outfit', sans-serif;
+    }
+    .badge-text-sub {
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Footer domain link */
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #64748b;
+    }
+    .domain-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #38bdf8;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow-cyan"></div>
+  <div class="glow-purple"></div>
+  <div class="glow-emerald"></div>
+
+  <div class="banner-card">
+    <!-- Left: Avatar Portrait -->
+    <div class="avatar-column">
+      <div class="avatar-wrapper">
+        <img class="avatar-img" src="assets/images/avatar.jpg" alt="Muhammad Asad" />
+      </div>
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        <span>OPEN FOR WORK</span>
+      </div>
+    </div>
+
+    <!-- Right: Bio & Highlights -->
+    <div class="info-column">
+      <div class="eyebrow">// Official Developer Portfolio</div>
+      <h1 class="name-title">Muhammad Asad</h1>
+      <div class="headline">
+        <span>AI &amp; Full-Stack Web Developer</span>
+        <span style="color: #64748b;">•</span>
+        <span class="highlight">BS AI (Emerson)</span>
+      </div>
+
+      <div class="badges-grid">
+        <div class="badge-card" style="border-left: 3px solid #10b981;">
+          <div class="badge-icon">🤖</div>
+          <div>
+            <div class="badge-text-top">AZ25 Lab (Current)</div>
+            <div class="badge-text-sub">AI &amp; Scraper Bots</div>
+          </div>
+        </div>
+
+        <div class="badge-card" style="border-left: 3px solid #06b6d4;">
+          <div class="badge-icon">🏢</div>
+          <div>
+            <div class="badge-text-top">TriTechTeal</div>
+            <div class="badge-text-sub">5+ Client Web Platforms</div>
+          </div>
+        </div>
+
+        <div class="badge-card" style="border-left: 3px solid #8b5cf6;">
+          <div class="badge-icon">🌐</div>
+          <div>
+            <div class="badge-text-top">End-to-End DNS &amp; Hosting</div>
+            <div class="badge-text-sub">Verpex, cPanel &amp; SSL</div>
+          </div>
+        </div>
+
+        <div class="badge-card" style="border-left: 3px solid #f59e0b;">
+          <div class="badge-icon">🎨</div>
+          <div>
+            <div class="badge-text-top">Logo &amp; Brand Design</div>
+            <div class="badge-text-sub">Vector SVGs &amp; Modern UI</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="domain-pill">
+          <span>🌐</span>
+          <span>m-asad-git.github.io/portfolio</span>
+        </div>
+        <div>📍 Multan, Pakistan</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
