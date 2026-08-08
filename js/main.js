@@ -520,17 +520,17 @@ function openResumeModal() {
         <div class="resume-item">
           <div class="resume-item-top">
             <span>AZ25 Lab (az25lab.com)</span>
-            <span style="color: var(--emerald); font-weight: 700;">2024 — Present (Current Role)</span>
+            <span style="color: var(--emerald); font-weight: 700;">March 2025 — Present (Current Role)</span>
           </div>
           <div class="resume-item-sub">AI &amp; Software Developer • Autonomous Bot Engineering</div>
-          <p class="resume-item-desc">Developing autonomous web scraping agents, Slack webhook notification bots, automated daily email digests, and productivity suites.</p>
+          <p class="resume-item-desc">Joined in March 2025. Developing autonomous web scraping agents, Slack webhook notification bots, automated daily email digests, and productivity suites.</p>
         </div>
 
         <!-- TriTechTeal -->
         <div class="resume-item">
           <div class="resume-item-top">
             <span>TriTechTeal (tritechteal.com)</span>
-            <span>2024</span>
+            <span>2024 — Jan 2025 (Former Workplace)</span>
           </div>
           <div class="resume-item-sub">Web Developer (Former Intern) • Client Web Platforms</div>
           <p class="resume-item-desc">Architected, developed, and deployed 5+ live client web platforms across healthcare, international commerce, real estate, and luxury architecture with custom DNS and cPanel hosting.</p>
